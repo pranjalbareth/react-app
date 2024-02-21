@@ -22,8 +22,8 @@ pipeline {
             steps {
                 script {
                     // Push Docker image to Artifactory
-                    def server = Artifactory.server env.ARTIFACTORY_SERVER_ID
-                    server.publish docker.image("${env.DOCKER_IMAGE}:latest").push(), ''
+                    def server = 'https://pranjalbareth.jfrog.io/artifactory/docker-local/'
+                    server.publish docker.image("${env.DOCKER_IMAGE}:latest").push(),
                 }
             }
         }
