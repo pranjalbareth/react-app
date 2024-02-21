@@ -23,7 +23,7 @@ pipeline {
                 script {
                     // Push Docker image to Artifactory
                     def server = 'https://pranjalbareth.jfrog.io/artifactory/docker-local/'
-                    server.publish docker.image("${env.DOCKER_IMAGE}:latest").push(),
+                    server.publish docker.image("${env.DOCKER_IMAGE}:latest").push(), ''
                 }
             }
         }
