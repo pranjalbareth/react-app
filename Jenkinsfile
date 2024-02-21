@@ -3,9 +3,9 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'react-app-image' // Name for your Docker image
-        ARTIFACTORY_SERVER_ID = 'artifactory1' // ID of the Artifactory server configured in Jenkins
+        ARTIFACTORY_SERVER_ID = 'docker-local' // ID of the Artifactory server configured in Jenkins
         DOCKER_REGISTRY = 'docker-local' // Name of the Docker repository in 
-        SERVER_URL= 'https://pranjalbareth.jfrog.io/artifactory/docker-local/' //artifactory server url
+        SERVER_URL= 'https://pranjalbareth.jfrog.io/artifactory/docker-local/' //artifactory server
     }
 
     stages {
