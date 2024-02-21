@@ -28,7 +28,7 @@ pipeline {
                 script {
                     // Push Docker image to Artifactory
                     def server = Artifactory.server env.ARTIFACTORY_SERVER_ID
-                    server.publish "${env.DOCKER_IMAGE}:latest", '', env.DOCKER_REGISTRY
+                    server.publish docker.image("${env.DOCKER_IMAGE}:latest").push(), ''
                 }
             }
         }
